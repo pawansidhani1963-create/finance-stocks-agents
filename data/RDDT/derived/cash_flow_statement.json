@@ -1,0 +1,111 @@
+{
+  "company": "RDDT",
+  "statement": "cash_flow_statement",
+  "facts": [
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": 215820000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": 3719000,
+      "currency": "USD",
+      "period": "Q1-2024",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": -54883000,
+      "currency": "USD",
+      "period": "Q2-2024",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": -11639000,
+      "currency": "USD",
+      "period": "Q3-2024",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": 126599000,
+      "currency": "USD",
+      "period": "Q1-2025",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": 110826000,
+      "currency": "USD",
+      "period": "Q2-2025",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    },
+    {
+      "company": "RDDT",
+      "statement": "cash_flow_statement",
+      "concept": "free_cash_flow",
+      "value": 183101000,
+      "currency": "USD",
+      "period": "Q3-2025",
+      "reported": false,
+      "derived_from": [
+        "operating_cash_flow",
+        "capital_expenditure"
+      ],
+      "derivation_type": "binary_subtraction",
+      "confidence": "high"
+    }
+  ]
+}

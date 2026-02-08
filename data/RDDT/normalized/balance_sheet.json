@@ -1,0 +1,72 @@
+{
+  "company": "RDDT",
+  "statement": "balance_sheet",
+  "facts": [
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "total_assets",
+      "value": 1596467000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    },
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "total_liabilities",
+      "value": 155897000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    },
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "total_equity",
+      "value": -286013000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    },
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "total_equity",
+      "value": -379064000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    },
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "cash_and_equivalents",
+      "value": 435810000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    },
+    {
+      "company": "RDDT",
+      "statement": "balance_sheet",
+      "concept": "cash_and_equivalents",
+      "value": 401176000,
+      "currency": "USD",
+      "period": "FY-2024",
+      "reported": true,
+      "source_form": "10-K",
+      "filed_date": "2025-02-13"
+    }
+  ]
+}

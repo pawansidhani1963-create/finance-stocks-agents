@@ -1,0 +1,106 @@
+{
+  "income_statement": {
+    "revenue": {
+      "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Primary revenue tag for most operating companies"
+    },
+    "gross_profit": {
+      "tag": "GrossProfit",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Some companies may only report revenue and cost of revenue; can be derived if missing"
+    },
+    "operating_income": {
+      "tag": "OperatingIncomeLoss",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Also called income from operations"
+    },
+    "net_income": {
+      "tag": "NetIncomeLoss",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "May include non-controlling interests; acceptable for fundamentals"
+    },
+    "eps_diluted": {
+      "tag": "EarningsPerShareDiluted",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Per-share metric; unit is USD/share"
+    }
+  },
+
+  "balance_sheet": {
+    "total_assets": {
+      "tag": "Assets",
+      "type": "instant",
+      "retrieval": "direct",
+      "notes": "Always point-in-time"
+    },
+    "total_liabilities": {
+      "tag": "Liabilities",
+      "type": "instant",
+      "retrieval": "direct",
+      "notes": "Always point-in-time"
+    },
+    "total_equity": {
+      "tag": "StockholdersEquity",
+      "type": "instant",
+      "retrieval": "direct",
+      "notes": "Also called shareholders' equity"
+    },
+    "cash_and_equivalents": {
+      "tag": "CashAndCashEquivalentsAtCarryingValue",
+      "type": "instant",
+      "retrieval": "direct",
+      "notes": "Does not include short-term investments"
+    },
+    "short_term_debt": {
+      "tag": "ShortTermBorrowings",
+      "type": "instant",
+      "retrieval": "sometimes_missing",
+      "notes": "Some companies include this inside current liabilities instead of a separate tag"
+    },
+    "long_term_debt": {
+      "tag": "LongTermDebt",
+      "type": "instant",
+      "retrieval": "sometimes_missing",
+      "notes": "May need alternative tags for foreign filers"
+    }
+  },
+
+  "cash_flow_statement": {
+    "operating_cash_flow": {
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "One of the most reliable cash flow tags"
+    },
+    "capital_expenditure": {
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Often negative in statements; treat absolute value consistently"
+    },
+    "free_cash_flow": {
+      "derived_from": ["operating_cash_flow", "capital_expenditure"],
+      "statement": "cash_flow_statement",
+      "type": "duration",
+      "retrieval": "derived",
+      "constraints": {
+            "same_period": true,
+            "same_currency": true
+        },
+      "derivation_type": "binary_subtraction",
+      "notes": "Almost never reported directly; must be derived"
+    },
+    "financing_cash_flow": {
+      "tag": "NetCashProvidedByUsedInFinancingActivities",
+      "type": "duration",
+      "retrieval": "direct",
+      "notes": "Includes debt issuance, repayment, equity transactions"
+    }
+  }
+}
