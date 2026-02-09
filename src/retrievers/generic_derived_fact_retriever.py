@@ -124,7 +124,7 @@ class GenericDerivedFactRetriever:
 
         return derived_all
     
-    def write(self, facts, write_dir):
+    def write(self, facts, write_dir, processed_date):
         """
         Write derived facts to storage
         
@@ -137,6 +137,7 @@ class GenericDerivedFactRetriever:
         payload = {
             "company": self.company_ticker,
             "statement": self.statement_type.value,
+            "processed_date": processed_date,
             "facts": facts
         }
 

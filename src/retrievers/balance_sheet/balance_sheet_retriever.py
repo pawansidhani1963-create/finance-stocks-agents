@@ -7,6 +7,7 @@ Specialized retriever for balance sheet facts using GenericRetriever
 # print(sys.path)
 
 import json
+from datetime import date
 import logging
 from pathlib import Path
 from retrievers.generic_direct_fact_retriever import GenericDirectFactRetriever, FactType, load_registry
@@ -43,6 +44,7 @@ class BalanceSheetRetriever:
         self.company_ticker = company_ticker
         self.direct_fact_registry = {}
         self.derived_fact_registry = {}
+        self.current_date = date.today().isoformat()
         for section, facts in registry.items():
             if facts:
                 if facts.get("retrieval") == "direct":
@@ -71,7 +73,7 @@ class BalanceSheetRetriever:
             facts: List of normalized facts
             project_root: Path to project root directory
         """
-        self.retriever.write(facts, project_root)
+        self.retriever.write(facts, project_root, self.current_date)
 
 
 # =========================

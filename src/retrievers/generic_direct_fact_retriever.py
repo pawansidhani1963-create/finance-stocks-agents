@@ -259,7 +259,7 @@ class GenericDirectFactRetriever:
     # FILE-BASED STORAGE
     # =========================
 
-    def write(self, facts, output_dir):
+    def write(self, facts, output_dir, processed_date):
         """
         Write normalized facts to storage
         
@@ -273,6 +273,7 @@ class GenericDirectFactRetriever:
         payload = {
             "company": self.company_ticker,
             "statement": self.statement_type.value,
+            "processed_date": processed_date,
             "facts": facts
         }
 

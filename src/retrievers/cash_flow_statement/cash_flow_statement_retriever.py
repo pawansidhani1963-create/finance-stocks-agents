@@ -6,6 +6,7 @@ Specialized retriever for cash flow statement facts using GenericRetriever
 
 import json
 import logging
+from datetime import date
 from pathlib import Path
 from retrievers.generic_derived_fact_retriever import GenericDerivedFactRetriever
 from retrievers.generic_direct_fact_retriever import GenericDirectFactRetriever, FactType, load_registry
@@ -43,6 +44,7 @@ class CashflowStatementRetriever:
         self.company_ticker = company_ticker
         self.direct_fact_registry = {}
         self.derived_fact_registry = {}
+        self.current_date = date.today().isoformat()
         for section, facts in registry.items():
             if facts:
                 if facts.get("retrieval") == "direct":
@@ -80,7 +82,7 @@ class CashflowStatementRetriever:
             project_root: Path to project root directory
         """
         if self.direct_fact_registry:
-            self.direct_fact_retriever.write(facts, write_dir)
+            self.direct_fact_retriever.write(facts, write_dir, self.current_date)
 
         return None
     
@@ -105,7 +107,7 @@ class CashflowStatementRetriever:
             project_root: Path to project root directory
         """
         if self.derived_fact_registry:
-            self.derived_fact_retriever.write(facts, write_dir)
+            self.derived_fact_retriever.write(facts, write_dir, self.current_date)
 
         return None
 
