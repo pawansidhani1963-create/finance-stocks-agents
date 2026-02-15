@@ -50,3 +50,11 @@ def download_companyfacts(company_ticker: str) -> dict:
     resp = requests.get(url, headers=SEC_HEADERS)
     resp.raise_for_status()
     return resp.json()
+
+def write_company_facts(company_facts: dict, company_ticker: str):
+    project_root = Path(__file__).parent.parent.parent.parent
+    write_path = f"{project_root}/data/{company_ticker}/raw/company_facts.json"
+
+    with open(write_path, "w") as f:
+        json.dump(company_facts, f, indent=2)
+
